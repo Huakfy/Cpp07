@@ -6,11 +6,11 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:13:39 by mjourno           #+#    #+#             */
-/*   Updated: 2023/09/21 14:53:40 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/09/21 14:59:09 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Whatever.hpp"
+#include "whatever.hpp"
 #include <iostream>
 
 int	main(void) {

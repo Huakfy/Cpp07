@@ -6,7 +6,7 @@
 #    By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 14:12:57 by mjourno           #+#    #+#              #
-#    Updated: 2023/09/21 14:36:56 by mjourno          ###   ########.fr        #
+#    Updated: 2023/09/21 14:59:14 by mjourno          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ FFORMAT	=	cpp
 SRC_DIR	=
 OBJ_DIR	=	obj/
 #Header
-HFILES	=	Whatever
+HFILES	=	whatever
 HFORMAT	=	hpp
 HEADER	=	$(addsuffix .$(HFORMAT), $(HFILES))
 
