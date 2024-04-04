@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:59:58 by mjourno           #+#    #+#             */
-/*   Updated: 2023/09/22 12:11:40 by mjourno          ###   ########.fr       */
+/*   Updated: 2024/04/04 14:19:15 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,34 @@
 #include <iostream>
 #include <iomanip>
 
-template<typename T>
-void	f(T content) {
-	std::cout << std::setprecision(2) << content << " ";
+class Awesome
+{
+  public:
+    Awesome( void ) : _n( 42 ) { return; }
+    int get( void ) const { return this->_n; }
+  private:
+    int _n;
+};
+
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs )
+{
+  o << rhs.get();
+  return o;
 }
 
-int		main(void) {
-	int	i[5] = {0, 1, 2, 3, 4};
-	iter(i, 5, f);
+template< typename T >
+void print( const T & x )
+{
+  std::cout << x << std::endl;
+  return;
+}
 
-	std::cout << std::endl;
+int main() {
+  int tab[] = { 0, 1, 2, 3, 4 };
+  Awesome tab2[5];
 
-	char	c[5] = {'a', 'b', 'c', 'd', 'e'};
-	iter(c, 5, f);
+  iter( tab, 5, print<const int> );
+  iter( tab2, 5, print<Awesome> );
 
-	std::cout << std::endl;
-
-	std::string	s[2] = {"Hello", "World!"};
-	iter(s, 2, f);
-
-	std::cout << std::endl;
-	return 0;
+  return 0;
 }

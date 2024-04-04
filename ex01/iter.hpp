@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 15:00:39 by mjourno           #+#    #+#             */
-/*   Updated: 2023/09/25 13:29:04 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/09/27 10:49:12 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 #include <string>
 
-template<typename T>
-void	iter(T *addr, size_t size, void (*f)(T const &)) {
+template<typename T, typename F>
+void	iter(T *addr, size_t size, void (*f)(F &)) {
 	for (size_t i = 0; i < size; i++)
 		f(addr[i]);
 }
